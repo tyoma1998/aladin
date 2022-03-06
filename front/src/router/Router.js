@@ -10,6 +10,8 @@ import { ROUTES } from "router/routes";
 import CheckEventPage from "pages/CheckEventPage/CheckEventPage";
 
 function ProtectedRouter() {
+  const DOMAIN = process.env.PORT || "http://localhost:8000";
+  console.log(DOMAIN);
   return (
     <Router history={history}>
       <Switch>
