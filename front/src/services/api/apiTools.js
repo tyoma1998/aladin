@@ -13,9 +13,12 @@ export function ejectErrorMessage(errors) {
 export function handleRequestError(error) {}
 
 const Authorization = "Authorization";
+const DOMAIN = process.env.PORT || "http://localhost:8000";
 
 export class API {
-  constructor(domain, options = {}) {
+  constructor(options = {}) {
+    const domain = DOMAIN;
+
     this.axios = axios.create({
       baseURL: domain,
       ...options,
