@@ -11,6 +11,7 @@ app.use(cors());
 app.use(express.json());
 // app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static("public"));
 
 // app.use('/test', require('./routes/test.routes'));
 // app.use('/album', require('./routes/album.routes'));
