@@ -1,1 +1,1 @@
-web: cd front && npm run start
+web: node back/run.js
