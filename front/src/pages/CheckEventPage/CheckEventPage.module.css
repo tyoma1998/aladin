@@ -24,7 +24,7 @@
 }
 
 .qustionText {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
 }
 
@@ -109,4 +109,44 @@
   font-size: 2em;
   font-weight: bold;
   color: rgb(10, 10, 10);
+}
+
+.buttonNext {
+  width: 200px;
+  height: 150px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #2565b8 #000 #0611aa;
+  border-radius: 6px;
+  background: linear-gradient(#0c41b4, #1411ad) #0d0b8b;
+  transition: 0.2s;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 15px;
+}
+
+.containerNextAnswer {
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 13, 208);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 13, 208, 1) 0%,
+    rgba(39, 73, 226, 1) 17%,
+    rgba(91, 203, 231, 1) 31%,
+    rgba(128, 241, 227, 1) 45%,
+    rgba(215, 215, 76, 1) 60%,
+    rgba(181, 169, 36, 1) 72%,
+    rgba(158, 133, 35, 1) 89%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }

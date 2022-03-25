@@ -110,3 +110,7 @@
   font-weight: bold;
   color: rgb(10, 10, 10);
 }
+
+.textCheck {
+  font-size: 30px !important;
+}

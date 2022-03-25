@@ -13,6 +13,30 @@ function AllDataPages() {
     setIsLoading(false);
   };
 
+  const getTextFalse = (id) => {
+    if (+id === 2) {
+      return "Вооружать";
+    }
+
+    if (+id === 3) {
+      return "Султан";
+    }
+
+    return "Убить";
+  };
+
+  const getTextTrue = (id) => {
+    if (+id === 2) {
+      return "Не вооружать";
+    }
+
+    if (+id === 3) {
+      return "Жасмин";
+    }
+
+    return "Пощадить";
+  };
+
   useEffect(() => {
     loadEvent();
   }, []);
@@ -23,10 +47,14 @@ function AllDataPages() {
         <div>
           {data?.length > 0 &&
             data.map((item) => {
+              console.log(item.id);
+              const textFalse = getTextFalse(item.id);
+              const textTrue = getTextTrue(item.id);
+
               return (
-                <div>
-                  {item.question}: за-
-                  {item.data.filter((value) => !!value).length} против-
+                <div className={st.textCheck}>
+                  {item.question}: {textTrue}-
+                  {item.data.filter((value) => !!value).length} {textFalse}-
                   {item.data.filter((value) => !value).length}
                 </div>
               );
