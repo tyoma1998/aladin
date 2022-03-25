@@ -78,46 +78,63 @@ function CheckEventPage() {
 
   if (isAnsweredQuestion) {
     return (
-      <div className={st.containerNextAnswer}>
-        <span className={st.thankText}>
-          Спасибо за ваш ответ, для перехода к следующему вопросу нажмите на
-          кнопку ниже
-        </span>
-        <button
-          className={st.buttonNext}
-          disabled={isLoading}
-          onClick={() => handleNextQuestion()}
-        >
-          Перейти к следующему вопросу
-        </button>
+      <div className={st.allContainer}>
+        <div className={st.imgHolde}>
+          <img
+            src="https://sun9-25.userapi.com/impf/RNqWLcsA9tZaPpecjUWatQapmVvvsIus1JQBrg/cQilw6t3MI4.jpg?size=750x536&quality=96&sign=298f4b5b603c6d7b8ee25e9ae8b9fa3f&type=album"
+            alt="Img"
+            className={st.holderImg}
+          />
+        </div>
+        <div className={st.containerInfo}>
+          <span className={st.thankText}>
+            Спасибо за ваш ответ, для перехода к следующему вопросу нажмите на
+            кнопку ниже
+          </span>
+          <button
+            className={st.buttonNext}
+            disabled={isLoading}
+            onClick={() => handleNextQuestion()}
+          >
+            Перейти к следующему вопросу
+          </button>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className={st.container}>
-      <div className={st.containerQustion}>
-        <span className={st.qustionText}>
-          {!isLoading ? data?.question : "Loading..."}
-        </span>
+    <div className={st.allContainer}>
+      <div className={st.imgHolde}>
+        <img
+          src="https://sun9-25.userapi.com/impf/RNqWLcsA9tZaPpecjUWatQapmVvvsIus1JQBrg/cQilw6t3MI4.jpg?size=750x536&quality=96&sign=298f4b5b603c6d7b8ee25e9ae8b9fa3f&type=album"
+          alt="Img"
+          className={st.holderImg}
+        />
       </div>
-      <div className={st.containerButton}>
-        <button
-          className={st.buttonDeath}
-          disabled={isLoading}
-          onClick={() => handleAnswerQuestion(false)}
-        >
-          {getTextFalse(id)}
-        </button>
-        <button
-          className={st.buttonSpare}
-          disabled={isLoading}
-          onClick={() => handleAnswerQuestion(true)}
-        >
-          {getTextTrue(id)}
-        </button>
-      </div>
-      {/* <div>
+      <div className={st.container}>
+        <div className={st.containerQustion}>
+          <span className={st.qustionText}>
+            {!isLoading ? data?.question : "Loading..."}
+          </span>
+        </div>
+        <div className={st.containerButton}>
+          <button
+            className={st.buttonDeath}
+            disabled={isLoading}
+            onClick={() => handleAnswerQuestion(false)}
+          >
+            {getTextFalse(id)}
+          </button>
+          <button
+            className={st.buttonSpare}
+            disabled={isLoading}
+            onClick={() => handleAnswerQuestion(true)}
+          >
+            {getTextTrue(id)}
+          </button>
+        </div>
+        {/* <div>
         <button
           disabled={isLoading}
           onClick={() =>
@@ -127,6 +144,7 @@ function CheckEventPage() {
           Убить
         </button>
       </div> */}
+      </div>
     </div>
   );
 }
