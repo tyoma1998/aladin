@@ -115,9 +115,7 @@ function CheckEventPage() {
       <div className={st.container}>
         <div className={st.containerQustion}>
           <span className={st.qustionText}>
-            {!isLoading
-              ? "Очень интересный вопрос" || data?.question
-              : "Loading..."}
+            {!isLoading ? data?.question : "Loading..."}
           </span>
         </div>
         <div className={st.containerButton}>
@@ -126,14 +124,14 @@ function CheckEventPage() {
             disabled={isLoading}
             onClick={() => handleAnswerQuestion(false)}
           >
-            {"Нет" || getTextFalse(id)}
+            {getTextFalse(id)}
           </button>
           <button
             className={st.buttonSpare}
             disabled={isLoading}
             onClick={() => handleAnswerQuestion(true)}
           >
-            {"Да" || getTextTrue(id)}
+            {getTextTrue(id)}
           </button>
         </div>
         {/* <div>
