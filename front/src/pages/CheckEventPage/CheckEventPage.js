@@ -68,7 +68,7 @@ function CheckEventPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
-  if (+id >= 5) {
+  if (+id >= 4) {
     return (
       <div className={st.containerThank}>
         <span className={st.thankText}>Спасибо за ваше участие!!!</span>
