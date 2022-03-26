@@ -25,7 +25,7 @@ function CheckEventPage() {
     setIsAnsweredQuestion(true);
     setIsLoading(false);
 
-    if (+id === 4) {
+    if (+id === 3) {
       handleNextQuestion();
     }
   };
